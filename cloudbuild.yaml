@@ -13,7 +13,7 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: 
     - 'push'
-    - 'gcr.io/${PROJECT_ID}/myreact-app:$SHORT_SHA'
+    - 'gcr.io/my-project-1521209271666/myreact-app:$SHORT_SHA'
 - id: 'deploy to gke'
   name: 'gcr.io/cloud-builders/gcloud'
   env:
@@ -28,5 +28,5 @@ steps:
           gcloud container clusters get-credentials my-cluster --project my-project-1521209271666 --zone europe-central2-a
           sed -i 's|gcr.io/project-id/myreact-app|gcr.io/$PROJECT_ID/myreact-app:$SHORT_SHA|' ./deployment.yaml
           kubectl apply -f ./deployment.yaml
-          'auth', 'activate-service-account', '1060866810332-compute@developer.gserviceaccount.com', '--key-file=my-project-1521209271666-d48bd4f231cf.json', '--project=${_PROJECT_ID}'
+          'auth', 'activate-service-account', '1060866810332-compute@developer.gserviceaccount.com', '--key-file=my-project-1521209271666-d48bd4f231cf.json', '--project=my-project-1521209271666'
 timeout: 2000s
