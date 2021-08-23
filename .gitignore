@@ -9,6 +9,7 @@
 /coverage
 
 # production
+#changes in gitignore
 /build
 
 # misc
