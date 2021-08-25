@@ -29,4 +29,5 @@ steps:
           sed -i 's|gcr.io/project-id/myreact-app|gcr.io/my-project-1521209271666/myreact-app:$SHORT_SHA|' ./deployment.yaml
           kubectl apply -f ./deployment.yaml
 timeout: 2000s
+# 'auth',
 # 'auth', 'activate-service-account', '1060866810332-compute@developer.gserviceaccount.com', '--key-file=my-project-1521209271666-d48bd4f231cf.json', '--project=my-project-1521209271666'
