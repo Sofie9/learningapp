@@ -24,3 +24,4 @@ spec:
       - image: gcr.io/project-id/myreact-app
         imagePullPolicy: Always
         name: myreact-app
+#
